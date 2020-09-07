@@ -17,11 +17,18 @@ Plugin 'othree/es.next.syntax.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'jason0x43/vim-js-indent'
+Plugin 'neoclide/coc.nvim'
 Plugin 'ternjs/tern_for_vim'
 
 call vundle#end()
 filetype plugin indent on
 " プラグインマネージャここまで
+
+""FileType
+autocmd BufRead,BufNewFile *.jsx  set filetype=javascript.jsx
+autocmd BufRead,BufNewFile *.tsx  set filetype=typescript.tsx
 
 "" その他のカスタム設定
 "文字コードをUTF-8に設定
